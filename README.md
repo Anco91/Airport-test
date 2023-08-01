@@ -55,7 +55,7 @@ Tapez les commandes suivantes :
 
 ## Configuration
 
-Créez un fichier .env contenant où vous y mettrez le CLIENT_ID, CLIENT_SECRET, EMAIL, PASSWD (password du user)
+Créez un fichier .env où vous y mettrez le CLIENT_ID, CLIENT_SECRET, EMAIL, PASSWD (password du user)
 
 ## Tests
 
