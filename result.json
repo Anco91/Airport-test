@@ -1,0 +1,136 @@
+{
+  "access_token": {
+    "value": "bc655cac04494cf59025efcc6afe5894c5446fb1-eb77a709-58aa-4383-9961-1ca1f766beb2",
+    "expires_at": "2023-08-01T21:35:17.649Z"
+  },
+  "items": [
+    {
+      "item": {
+        "id": 6648847,
+        "status": 0,
+        "status_code_info": null,
+        "status_code_description": null,
+        "bank_id": 408
+      },
+      "accounts": [
+        {
+          "id": 30179394,
+          "name": "Compte Crédit Immobilier",
+          "balance": 140200,
+          "status": 0,
+          "status_code_info": null,
+          "status_code_description": null,
+          "updated_at": "2022-04-22T14:53:00.200Z",
+          "type": "loan",
+          "is_paused": false,
+          "currency_code": "EUR",
+          "item_id": 6648847,
+          "bank_id": 408,
+          "loan_details": {
+            "next_payment_date": null,
+            "next_payment_amount": 2000,
+            "maturity_date": "2022-05-22",
+            "opening_date": "2020-04-22",
+            "interest_rate": 1.2,
+            "type": null,
+            "borrowed_capital": 500000,
+            "repaid_capital": 24000,
+            "remaining_capital": 476000,
+            "total_estimated_interests": 6441.9071367778815
+          },
+          "savings_details": null,
+          "is_pro": false,
+          "iban": null
+        },
+        {
+          "id": 30179393,
+          "name": "Compte Titres",
+          "balance": 8700,
+          "status": 0,
+          "status_code_info": null,
+          "status_code_description": null,
+          "updated_at": "2022-04-22T14:52:59.192Z",
+          "type": "brokerage",
+          "is_paused": false,
+          "currency_code": "EUR",
+          "item_id": 6648847,
+          "bank_id": 408,
+          "loan_details": null,
+          "savings_details": null,
+          "is_pro": false,
+          "iban": null
+        },
+        {
+          "id": 30179392,
+          "name": "Compte Épargne",
+          "balance": 6900,
+          "status": 0,
+          "status_code_info": null,
+          "status_code_description": null,
+          "updated_at": "2022-04-22T14:52:58.988Z",
+          "type": "savings",
+          "is_paused": false,
+          "currency_code": "EUR",
+          "item_id": 6648847,
+          "bank_id": 408,
+          "loan_details": null,
+          "savings_details": {
+            "opening_date": "2015-09-18",
+            "interest_rate": 0.9,
+            "ceiling": 10000
+          },
+          "is_pro": false,
+          "iban": null
+        },
+        {
+          "id": 30179391,
+          "name": "Compte Courant",
+          "balance": 1037,
+          "status": 0,
+          "status_code_info": null,
+          "status_code_description": null,
+          "updated_at": "2022-04-22T14:52:53.043Z",
+          "type": "checking",
+          "is_paused": false,
+          "currency_code": "EUR",
+          "item_id": 6648847,
+          "bank_id": 408,
+          "loan_details": null,
+          "savings_details": null,
+          "is_pro": false,
+          "iban": "FR2517569000704129741793V21"
+        }
+      ]
+    }
+  ],
+  "transactions": [
+    {
+      "id": 38000784535997,
+      "clean_description": "Achat De Titres",
+      "bank_description": "ACHAT DE TITRES - 260422",
+      "amount": -1693,
+      "date": "2022-04-26",
+      "updated_at": "2022-04-22T14:53:00.048Z",
+      "currency_code": "EUR",
+      "category_id": 85,
+      "account_id": 30179393,
+      "show_client_side": true,
+      "is_deleted": false,
+      "is_future": true
+    },
+    {
+      "id": 38000784535885,
+      "clean_description": "Retraite",
+      "bank_description": "Retraite - 260422",
+      "amount": 1733,
+      "date": "2022-04-26",
+      "updated_at": "2022-04-22T14:52:58.930Z",
+      "currency_code": "EUR",
+      "category_id": 279,
+      "account_id": 30179391,
+      "show_client_side": true,
+      "is_deleted": false,
+      "is_future": true
+    }
+  ]
+}
