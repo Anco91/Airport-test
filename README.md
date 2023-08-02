@@ -48,7 +48,7 @@ Le programme effectuera les actions suivantes :
 
 ## Virtualisation légère
 
-Ou vous pouvez utiliser le docker que j'ai créer, si vous avez docker d'installer sur votre environnement.
+Ou vous pouvez utiliser le docker que j'ai créée, si vous avez docker d'installer sur votre environnement.
 Tapez les commandes suivantes :
 -   docker build -t test-bridge .
 -   docker run -it --rm test-bridge
