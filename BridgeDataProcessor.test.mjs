@@ -122,10 +122,10 @@ const transactionsResponseData = {
         next_uri: null,
     },
 };
-
+const mockAccessToken = 'test_access_token';
 describe('BridgeDataProcessor', () => {
     test('processAndSaveData', async () => {
-        
+
         fetchAPI.request.mockImplementation((url) => {
             if (url === 'https://api.bridgeapi.io/v2/authenticate') {
                 return authResponseData;
@@ -140,11 +140,25 @@ describe('BridgeDataProcessor', () => {
             }
         });
 
-        
         const dataProcessor = new BridgeDataProcessor(fs, {}, {}, fetchAPI);
         await dataProcessor.processAndSaveData();
 
-        
+        expect(fetchAPI.request).toHaveBeenCalledWith('https://api.bridgeapi.io/v2/authenticate', 'POST', {});
+        expect(fetchAPI.request).toHaveBeenCalledWith('https://api.bridgeapi.io/v2/items', 'GET', null, {
+            headers: {
+                Authorization: `Bearer ${mockAccessToken}`,
+            }
+        });
+        expect(fetchAPI.request).toHaveBeenCalledWith('https://api.bridgeapi.io/v2/accounts?item_id=6648847', 'GET', null, {
+            headers: {
+                Authorization: `Bearer ${mockAccessToken}`,
+            }
+        });
+        expect(fetchAPI.request).toHaveBeenCalledWith('https://api.bridgeapi.io/v2/transactions?limit=2', 'GET', null, {
+            headers: {
+                Authorization: `Bearer ${mockAccessToken}`,
+            }
+        });
         expect(fs.writeFileSync).toHaveBeenCalledWith(
             'result.json',
             JSON.stringify({
@@ -153,7 +167,7 @@ describe('BridgeDataProcessor', () => {
                     expires_at: '2023-08-01T17:17:37.106Z',
                 },
                 items: [
-                    {  
+                    {
                         item: itemsResponseData.resources[0],
                         accounts: accountsResponseData.resources,
                     },
